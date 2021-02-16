@@ -322,6 +322,18 @@ const Section: React.FC = () => {
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"
+                  onClick={() => router.push('/about')}
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: "none" }}
+                >
+                  About
+                </Button>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
                   onClick={() => router.push('/blogs')}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: "none" }}
