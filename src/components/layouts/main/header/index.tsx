@@ -33,7 +33,7 @@ const Section: React.FC = () => {
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
   const bg = useColorModeValue("white", "gray.800");
-  const ref = React.useRef();
+  const ref = React.useRef<HTMLElement>();
   const [y, setY] = React.useState(0);
   const { height = 0 } = ref.current ? ref.current.getBoundingClientRect() : {};
 
@@ -44,7 +44,7 @@ const Section: React.FC = () => {
   const cl = useColorModeValue("gray.800", "white");
   const mobileNav = useDisclosure();
 
-  const Section = (props) => {
+  const Section = (props: {icon?: JSX.Element, title: string, description?: JSX.Element, children: React.ReactNode}) => {
     const ic = useColorModeValue("brand.600", "brand.50");
     const hbg = useColorModeValue("gray.50", "brand.400");
     const tcl = useColorModeValue("gray.900", "gray.50");
@@ -84,7 +84,7 @@ const Section: React.FC = () => {
     );
   };
 
-  const Features = (props) => {
+  const Services = (props: {h?: number}) => {
     const hbg = useColorModeValue("gray.50", "brand.400");
     const hbgh = useColorModeValue("gray.100", "brand.500");
     const tcl = useColorModeValue("gray.900", "gray.50");
@@ -295,6 +295,7 @@ const Section: React.FC = () => {
   return (
     <React.Fragment>
       <chakra.header
+        // @ts-ignore
         ref={ref}
         shadow={y > height ? "sm" : undefined}
         transition="box-shadow 0.2s"
@@ -333,7 +334,7 @@ const Section: React.FC = () => {
                       _focus={{ boxShadow: "none" }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                      Features
+                      Services
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
@@ -341,7 +342,7 @@ const Section: React.FC = () => {
                     maxW="md"
                     _focus={{ boxShadow: "md" }}
                   >
-                    <Features />
+                    <Services />
                   </PopoverContent>
                 </Popover>
                 <Button
