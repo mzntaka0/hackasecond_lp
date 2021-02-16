@@ -20,12 +20,13 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import { useViewportScroll } from "framer-motion";
-
 import { IoIosArrowDown } from "react-icons/io";
 import { AiFillHome, AiOutlineInbox } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
+
 import Logo from "components/atoms/Logo";
+
 
 const Section: React.FC = () => {
   const { toggleColorMode: toggleMode } = useColorMode();
