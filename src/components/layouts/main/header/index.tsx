@@ -1,4 +1,5 @@
 import React from "react";
+import {useRouter} from 'next/router'
 import {
   chakra,
   HStack,
@@ -29,6 +30,7 @@ import Logo from "components/atoms/Logo";
 
 
 const Section: React.FC = () => {
+  const router = useRouter()
   const { toggleColorMode: toggleMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
@@ -99,7 +101,7 @@ const Section: React.FC = () => {
           p={{ sm: 8 }}
         >
           <Section
-            title="Analytics"
+            title="Machine Learning"
             icon={
               <path
                 strokeLinecap="round"
@@ -113,7 +115,7 @@ const Section: React.FC = () => {
           </Section>
 
           <Section
-            title="Engagement"
+            title="Frontend"
             icon={
               <path
                 strokeLinecap="round"
@@ -127,7 +129,7 @@ const Section: React.FC = () => {
           </Section>
 
           <Section
-            title="Security"
+            title="Create API"
             icon={
               <path
                 strokeLinecap="round"
@@ -240,7 +242,7 @@ const Section: React.FC = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </chakra.svg>
-                <chakra.span ml={3}>Contact Sales</chakra.span>
+                <chakra.span ml={3}>Contact</chakra.span>
               </Link>
             </Box>
           </Stack>
@@ -292,6 +294,7 @@ const Section: React.FC = () => {
       </Button>
     </VStack>
   );
+
   return (
     <React.Fragment>
       <chakra.header
@@ -351,6 +354,7 @@ const Section: React.FC = () => {
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"
+                  onClick={() => router.push('/blogs')}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: "none" }}
                 >
@@ -362,6 +366,7 @@ const Section: React.FC = () => {
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"
+                  onClick={() => router.push('/pricing')}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: "none" }}
                 >
@@ -371,14 +376,6 @@ const Section: React.FC = () => {
             </Flex>
             <Spacer />
             <Flex justify="flex-end" align="center" color="gray.400">
-              <HStack spacing="5" display={{ base: "none", md: "flex" }}>
-                <Button colorScheme="brand" variant="ghost" size="sm">
-                  Sign in
-                </Button>
-                <Button colorScheme="brand" variant="solid" size="sm">
-                  Sign up
-                </Button>
-              </HStack>
               <IconButton
                 size="md"
                 fontSize="lg"

@@ -4,7 +4,7 @@ import React from 'react'
 const Component: React.FC = () => {
   return (
     <div>
-      Hack a second
+      hoge
     </div>
   )
 }
