@@ -6,6 +6,7 @@ import {
 import Headroom from 'react-headroom'
 
 import Header from './header'
+import Footer from './footer'
 
 type Props = {
   children: React.ReactNode,
@@ -26,6 +27,7 @@ const Layout: React.FC<Props> = (props) => {
       <Box>
         {props.children}
       </Box>
+      <Footer yearFrom={2020} />
     </>
 
   )
