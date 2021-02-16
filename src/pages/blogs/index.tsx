@@ -1,6 +1,6 @@
 import {NextPage} from 'next'
 
-import Content from 'components/contents/index'
+import Content from 'components/contents/blogs/index'
 
 
 const Page: NextPage<{}> = () => {
