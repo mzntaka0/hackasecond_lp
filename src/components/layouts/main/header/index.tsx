@@ -24,6 +24,7 @@ import { useViewportScroll } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import { AiFillHome, AiOutlineInbox, AiOutlineCode } from "react-icons/ai";
 import { BsFillCameraVideoFill, BsDisplay, BsGear } from "react-icons/bs";
+import {BiBookAlt} from 'react-icons/bi'
 import {FaAssistiveListeningSystems} from 'react-icons/fa'
 import {GoGraph} from 'react-icons/go'
 import {RiLinksFill} from 'react-icons/ri'
@@ -141,7 +142,13 @@ const Section: React.FC = () => {
             title="Consultation"
             icon={<FaAssistiveListeningSystems />}
           >
-            Build your solution faster using the shoulder of giants.
+            Define your issue/problem first.
+          </Section>
+          <Section
+            title="Education"
+            icon={<BiBookAlt />}
+          >
+            Know a practical knowledge of "Computer Science".
           </Section>
         </SimpleGrid>
         <Box px={{ base: 5, sm: 8 }} py={5} bg={hbg} display={{ sm: "flex" }}>
@@ -182,7 +189,7 @@ const Section: React.FC = () => {
                     d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </chakra.svg>
-                <chakra.span ml={3}>Watch Demo</chakra.span>
+                <chakra.span ml={3}>See Portfolio</chakra.span>
               </Link>
             </Box>
 
