@@ -22,7 +22,7 @@ import {
 } from "@chakra-ui/react";
 import { useViewportScroll } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
-import { AiFillHome, AiOutlineInbox } from "react-icons/ai";
+import { AiFillHome, AiOutlineInbox, AiOutlineCode } from "react-icons/ai";
 import { BsFillCameraVideoFill, BsDisplay, BsGear } from "react-icons/bs";
 import {FaAssistiveListeningSystems} from 'react-icons/fa'
 import {GoGraph} from 'react-icons/go'
@@ -126,7 +126,7 @@ const Section: React.FC = () => {
 
           <Section
             title="Contract Development"
-            icon={<FaAssistiveListeningSystems />}
+            icon={<AiOutlineCode />}
           >
             Customize anything for your needs.
           </Section>
@@ -134,6 +134,12 @@ const Section: React.FC = () => {
           <Section
             title="Integrations"
             icon={<RiLinksFill />}
+          >
+            Build your solution faster using the shoulder of giants.
+          </Section>
+          <Section
+            title="Consultation"
+            icon={<FaAssistiveListeningSystems />}
           >
             Build your solution faster using the shoulder of giants.
           </Section>
