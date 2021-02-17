@@ -24,7 +24,7 @@ import { useViewportScroll } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import { AiFillHome, AiOutlineInbox, AiOutlineCode } from "react-icons/ai";
 import { BsFillCameraVideoFill, BsDisplay, BsGear } from "react-icons/bs";
-import {BiBookAlt} from 'react-icons/bi'
+import {BiBookAlt, BiPlug} from 'react-icons/bi'
 import {FaAssistiveListeningSystems} from 'react-icons/fa'
 import {GoGraph} from 'react-icons/go'
 import {RiLinksFill} from 'react-icons/ri'
@@ -50,7 +50,7 @@ const Section: React.FC = () => {
   const cl = useColorModeValue("gray.800", "white");
   const mobileNav = useDisclosure();
 
-  const Section = (props: {icon?: JSX.Element, title: string, description?: JSX.Element, children: React.ReactNode}) => {
+  const Section = (props: {icon?: JSX.Element, title: string, description?: JSX.Element, link: string,  children: React.ReactNode}) => {
     const ic = useColorModeValue("brand.600", "brand.50");
     const hbg = useColorModeValue("gray.50", "brand.400");
     const tcl = useColorModeValue("gray.900", "gray.50");
@@ -63,7 +63,7 @@ const Section: React.FC = () => {
         alignItems="start"
         rounded="lg"
         _hover={{ bg: hbg }}
-        href="#"
+        href={props.link}
       >
         <chakra.svg
           flexShrink={0}
@@ -107,6 +107,7 @@ const Section: React.FC = () => {
           <Section
             title="Machine Learning"
             icon={<GoGraph />}
+            link='/services/machine_learning'
           >
             Get a better accuracy ML model by customizing for you.
           </Section>
@@ -114,13 +115,15 @@ const Section: React.FC = () => {
           <Section
             title="Frontend"
             icon={<BsDisplay />}
+            link='/services/frontend'
           >
             Make a better "User Interface" to make your product more valuable.
           </Section>
 
           <Section
             title="Create API"
-            icon={<BsGear />}
+            icon={<BiPlug />}
+            link='/services/api'
           >
             Provide good services which is highly sophisticated.
           </Section>
@@ -128,25 +131,29 @@ const Section: React.FC = () => {
           <Section
             title="Contract Development"
             icon={<AiOutlineCode />}
+            link='/services/contract_development'
           >
             Customize anything for your needs.
           </Section>
 
           <Section
-            title="Integrations"
+            title="Integration"
             icon={<RiLinksFill />}
+            link='/services/integration'
           >
             Build your solution faster using the shoulder of giants.
           </Section>
           <Section
             title="Consultation"
             icon={<FaAssistiveListeningSystems />}
+            link='/services/consultation'
           >
             Define your issue/problem first.
           </Section>
           <Section
             title="Education"
             icon={<BiBookAlt />}
+            link='/services/education'
           >
             Know a practical knowledge of "Computer Science".
           </Section>
@@ -288,6 +295,7 @@ const Section: React.FC = () => {
         borderTopColor="brand.400"
         w="full"
         overflowY="hidden"
+        boxShadow='2xl'
       >
         <chakra.div h="4.5rem" mx="auto" maxW="1200px">
           <Flex
@@ -306,6 +314,30 @@ const Section: React.FC = () => {
             </Flex>
             <Flex>
               <HStack spacing="5" display={{ base: "none", md: "flex" }}>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  onClick={() => router.push('/')}
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: "none" }}
+                >
+                  Home
+                </Button>
+                <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  onClick={() => router.push('/about')}
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: "none" }}
+                >
+                  About
+                </Button>
                 <Popover>
                   <PopoverTrigger>
                     <Button
@@ -335,11 +367,11 @@ const Section: React.FC = () => {
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"
-                  onClick={() => router.push('/about')}
+                  onClick={() => router.push('/pricing')}
                   _hover={{ color: cl }}
                   _focus={{ boxShadow: "none" }}
                 >
-                  About
+                  Pricing
                 </Button>
                 <Button
                   bg={bg}
@@ -352,18 +384,6 @@ const Section: React.FC = () => {
                   _focus={{ boxShadow: "none" }}
                 >
                   Blog
-                </Button>
-                <Button
-                  bg={bg}
-                  color="gray.500"
-                  display="inline-flex"
-                  alignItems="center"
-                  fontSize="md"
-                  onClick={() => router.push('/pricing')}
-                  _hover={{ color: cl }}
-                  _focus={{ boxShadow: "none" }}
-                >
-                  Pricing
                 </Button>
               </HStack>
             </Flex>
