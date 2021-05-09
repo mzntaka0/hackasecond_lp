@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+  Heading
+} from '@chakra-ui/react'
 
 
 const ObjectComponent: React.FC = () => {
@@ -8,13 +11,17 @@ const ObjectComponent: React.FC = () => {
       Jan 10th, 1994 <br />
       Computer Lover / Book Lover <br />
 
-      lang
+      <Heading size='lg'>
+        lang
+      </Heading>
       <ul>
         <li>Python</li>
         <li>TypeScript</li>
       </ul>
 
-      tool
+      <Heading size='lg'>
+        tool
+      </Heading>
       <ul>
         <li>PyTorch</li>
         <li>NumPy</li>
@@ -33,7 +40,9 @@ const ObjectComponent: React.FC = () => {
         <li>AWS CDK</li>
       </ul>
 
-      skill
+      <Heading size='lg'>
+        skill
+      </Heading>
       <ul>
         <li>Machine Learning</li>
         <li>Audio Processing</li>
