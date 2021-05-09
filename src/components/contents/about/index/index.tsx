@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from 'components/layouts/main'
 import styles from 'styles/Home.module.css'
+import ProfileImage from './ProfileImage'
 
 
 const Content: React.FC = () => {
@@ -11,6 +12,7 @@ const Content: React.FC = () => {
         <main className={styles.main}>
           This page is gonna host a about page. <br />
           Plase coming soon..
+          <ProfileImage />
         </main>
       </div>
     </Layout>
