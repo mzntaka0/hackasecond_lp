@@ -44,7 +44,7 @@ const ObjectComponent: React.FC = () => {
               lineHeight={{ md: "shorter" }}
               textShadow="2px 0 currentcolor"
             >
-              Clear overview for efficient tracking
+              Create your own Machine Learning Model(Image, Audio, NLP, Tabular, etc)
             </chakra.h2>
             <chakra.p
               mb={5}
@@ -93,7 +93,7 @@ const ObjectComponent: React.FC = () => {
               color={useColorModeValue("gray.900", "gray.400")}
               lineHeight={{ md: "shorter" }}
             >
-              Decide how you integrate Payments
+              Create your MVP service to validate your great idea.
             </chakra.h2>
             <chakra.p
               mb={5}
