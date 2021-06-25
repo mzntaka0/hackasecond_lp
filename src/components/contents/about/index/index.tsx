@@ -41,6 +41,12 @@ const Content: React.FC = () => {
                 width='300px'
                 alt=""
               />
+              <br />
+              <img
+                src="/desk.jpg"
+                width='300px'
+                alt=""
+              />
             </Box>
             <Box>
               <Profiles />

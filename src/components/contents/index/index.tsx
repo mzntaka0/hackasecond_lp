@@ -1,8 +1,11 @@
 import React from 'react'
+import {VStack} from '@chakra-ui/react'
 
 import Layout from 'components/layouts/main'
 import styles from 'styles/Home.module.css'
 import Heros from './Heros'
+import Features from './Features'
+import Cases from './Cases'
 
 
 const Content: React.FC = () => {
@@ -10,7 +13,11 @@ const Content: React.FC = () => {
     <Layout title='main page'>
       <div className={styles.container}>
         <main className={styles.main}>
-          <Heros />
+          <VStack>
+            <Heros />
+            <Features />
+            <Cases />
+          </VStack>
         </main>
       </div>
     </Layout>
