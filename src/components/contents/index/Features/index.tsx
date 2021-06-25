@@ -7,6 +7,9 @@ import {
   useColorModeValue,
   SimpleGrid,
   HStack,
+  UnorderedList,
+  ListItem,
+  Spacer
 } from '@chakra-ui/react'
 import {
   AiFillStar
@@ -121,8 +124,38 @@ const ObjectComponent: React.FC = () => {
               />
             }
           >
-            Hand crafted dashboards for everything from Recurring Revenue to
-            Customer Churn.
+            <br />
+            <Flex>
+              <Box>
+                <UnorderedList>
+                  <ListItem>Machine Learning</ListItem>
+                  <UnorderedList>
+                    <ListItem>PyTorch</ListItem>
+                    <ListItem>TorchVision</ListItem>
+                    <ListItem>TorchAudio</ListItem>
+                    <ListItem>TorchText</ListItem>
+                    <ListItem>NumPy</ListItem>
+                    <ListItem>Pandas</ListItem>
+                    <ListItem>Scipy</ListItem>
+                  </UnorderedList>
+                </UnorderedList>
+              </Box>
+              <Spacer />
+              <Box>
+                <UnorderedList>
+                  <ListItem>Web API</ListItem>
+                  <UnorderedList>
+                    <ListItem>FastAPI</ListItem>
+                    <ListItem>Django REST Framework</ListItem>
+                  </UnorderedList>
+                  <br />
+                  <ListItem>Fullstack Web</ListItem>
+                  <UnorderedList>
+                    <ListItem>Django</ListItem>
+                  </UnorderedList>
+                </UnorderedList>
+              </Box>
+            </Flex>
           </Feature>
 
           <Feature
