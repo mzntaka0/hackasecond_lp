@@ -108,21 +108,6 @@ const Component: React.FC = () => {
           </Tooltip>
         </Stack>
       </Box>
-      <Box
-        w={{ base: "full", md: 10 / 12 }}
-        mx="auto"
-        mt={20}
-        textAlign="center"
-      >
-        <Image
-          w="full"
-          rounded="lg"
-          shadow="2xl"
-          src="https://kutty.netlify.app/hero.jpg"
-          alt="Hellonext feedback boards software screenshot"
-        />
-        This page introduces "Hack a second" produced by Takao Mizuno(@mzntaka0)
-      </Box>
     </Box>
   );
 };
