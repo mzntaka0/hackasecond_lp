@@ -301,11 +301,10 @@ const Section: React.FC = () => {
           <Flex
             w="full"
             h="full"
-            px="6"
             alignItems="center"
             justifyContent="space-between"
           >
-            <Flex align="flex-start">
+            <Box>
               <Link href="/">
                 <HStack
                   w='40px'
@@ -313,7 +312,7 @@ const Section: React.FC = () => {
                   <Logo />
                 </HStack>
               </Link>
-            </Flex>
+            </Box>
             <Flex>
               <HStack spacing="5" display={{ base: "none", md: "flex" }}>
                 <Button
@@ -340,7 +339,7 @@ const Section: React.FC = () => {
                 >
                   About
                 </Button>
-                <Popover>
+                {/*<Popover>
                   <PopoverTrigger>
                     <Button
                       bg={bg}
@@ -362,8 +361,8 @@ const Section: React.FC = () => {
                   >
                     <Services />
                   </PopoverContent>
-                </Popover>
-                <Button
+                  </Popover>*/}
+                {/*<Button
                   bg={bg}
                   color="gray.500"
                   display="inline-flex"
@@ -374,7 +373,7 @@ const Section: React.FC = () => {
                   _focus={{ boxShadow: "none" }}
                 >
                   Pricing
-                </Button>
+                  </Button>*/}
                 <Button
                   bg={bg}
                   color="gray.500"
