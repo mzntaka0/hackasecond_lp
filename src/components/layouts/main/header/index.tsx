@@ -307,7 +307,9 @@ const Section: React.FC = () => {
           >
             <Flex align="flex-start">
               <Link href="/">
-                <HStack>
+                <HStack
+                  w='40px'
+                >
                   <Logo />
                 </HStack>
               </Link>

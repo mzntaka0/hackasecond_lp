@@ -34,7 +34,9 @@ const Section: React.FC<Props> = ({yearFrom=new Date().getFullYear()}) => {
           justifyContent: 'center'
         }}
       >
-        <HStack>
+        <HStack
+          w='50px'
+        >
           <Logo />
           <Text>
             &copy;{isCorrect ?  `${yearFrom} - ` : null}{currentYear},&nbsp; "Hack a second" powered by Takao Mizuno(@mzntaka0)

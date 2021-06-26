@@ -3,9 +3,11 @@ import Image from 'next/image'
 
 const Component: React.FC = () => {
   return (
-    <div>
-      Hack a second
-    </div>
+    <img
+      src="/hackasecond-logo.jpg"
+      width='100%'
+      height='100%'
+    />
   )
 }
 
