@@ -1,11 +1,9 @@
-import {NextPage} from 'next'
+import { NextPage } from "next";
 
-import Content from 'components/contents/services/consultation'
-
+import Content from "components/contents/services/consultation";
 
 const Page: NextPage<{}> = () => {
-  return <Content />
-}
+  return <Content />;
+};
 
-
-export default Page
+export default Page;
