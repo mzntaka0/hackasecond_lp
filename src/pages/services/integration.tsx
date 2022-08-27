@@ -1,11 +1,12 @@
-import {NextPage} from 'next'
+import { CustomNextPage } from "types/customNextPage";
 
-import Content from 'components/contents/services/integration'
+import Content from "components/services/integration";
 
+const Page: CustomNextPage = () => {
+  return <Content />;
+};
 
-const Page: NextPage<{}> = () => {
-  return <Content />
-}
+Page.title = "Integration";
+Page.layout = "main";
 
-
-export default Page
+export default Page;

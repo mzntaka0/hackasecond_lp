@@ -1,11 +1,11 @@
-import {NextPage} from 'next'
+import { CustomNextPage } from "types/customNextPage";
+import Content from "components/about/index";
 
-import Content from 'components/contents/about/index'
+const Page: CustomNextPage = () => {
+  return <Content />;
+};
 
+Page.title = "About";
+Page.layout = "main";
 
-const Page: NextPage<{}> = () => {
-  return <Content />
-}
-
-
-export default Page
+export default Page;

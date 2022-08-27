@@ -1,9 +1,12 @@
-import { NextPage } from "next";
+import { CustomNextPage } from "types/customNextPage";
 
-import Content from "components/contents/services/consultation";
+import Content from "components/services/consultation";
 
-const Page: NextPage<{}> = () => {
+const Page: CustomNextPage = () => {
   return <Content />;
 };
+
+Page.title = "Consultation";
+Page.layout = "main";
 
 export default Page;
