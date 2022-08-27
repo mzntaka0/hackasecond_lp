@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { Button, Typography, Stack } from "@mui/material";
 
 import Logo from "components/common/Logo";
-import styles from "styles/Home.module.css"; // TODO: replace this style w/ footer module style
 
 type Props = {
   yearFrom?: number;
@@ -14,7 +13,7 @@ const Section: React.FC<Props> = ({ yearFrom = new Date().getFullYear() }) => {
   const currentYear = new Date().getFullYear();
   const isCorrect: boolean = currentYear > yearFrom;
   return (
-    <footer className={styles.footer}>
+    <footer>
       <div
         style={{
           position: "relative",

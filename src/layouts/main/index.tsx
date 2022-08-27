@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 import Headroom from "react-headroom";
 
 import Header from "./Header";
@@ -16,7 +16,14 @@ const Layout: React.FC<Props> = (props) => {
       <Headroom>
         <Header />
       </Headroom>
-      <Box>{children}</Box>
+      <Stack
+        sx={{
+          p: 3,
+        }}
+        spacing={4}
+      >
+        {children}
+      </Stack>
     </>
   );
 };
