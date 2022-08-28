@@ -20,7 +20,7 @@ const Layout: React.FC<Props> = (props) => {
       <Stack
         sx={{
           p: 3,
-          height: `calc(100vh - ${headerHeight})`,
+          height: `calc(100vh - ${headerHeight}) * 2`,
         }}
         spacing={4}
       >

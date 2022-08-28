@@ -16,10 +16,10 @@ export const menus: MenuType[] = [
     title: "Home",
     to: pagesPath.$url().pathname,
   },
-  {
-    title: "About",
-    to: pagesPath.about.$url().pathname,
-  },
+  //{
+  //  title: "About",
+  //  to: pagesPath.about.$url().pathname,
+  //},
   {
     title: "Blog",
     to: pagesPath.blogs.$url().pathname,

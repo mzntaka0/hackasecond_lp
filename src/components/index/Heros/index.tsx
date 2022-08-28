@@ -17,7 +17,7 @@ const Component: React.FC = () => {
     //  });
   };
   return (
-    <Box px={8} py={24} mx="auto">
+    <Box px={8} pt={24} pb={16} mx="auto">
       <Stack alignItems="center" spacing={3}>
         <Typography
           sx={{
