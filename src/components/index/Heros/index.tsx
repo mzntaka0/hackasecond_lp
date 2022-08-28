@@ -18,29 +18,39 @@ const Component: React.FC = () => {
   };
   return (
     <Box px={8} py={24} mx="auto">
-      <Box
-      //w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
-      //mx="auto"
-      //textAlign={{ base: "left", md: "center" }}
-      >
+      <Stack alignItems="center" spacing={3}>
         <Typography
-          mb={6}
           sx={{
-            color: "#EDF2F7",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            margin: 0,
+            lineHeight: 1,
+            fontSize: "3.75rem",
+            letterSpacing: "-0.025em",
+            fontFeatureSettings: "kern",
+            fontFamily:
+              '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
           }}
-          fontSize={{ base: "4xl", md: "6xl" }}
-          fontWeight="bold"
-          lineHeight="none"
-          letterSpacing={{ base: "normal", md: "tight" }}
+          mb={6}
+          color="text.main"
+          fontWeight="800"
         >
           Enhance the value of your{" "}
           <Typography
             sx={{
-              color: "linear-gradient(90deg, #48BBB78 0%, #805AD5 100%)",
+              margin: 0,
+              lineHeight: 1,
+              fontSize: "3.75rem",
+              letterSpacing: "-0.025em",
+              backgroundClip: "text",
+              color: "transparent",
+              backgroundImage:
+                "linear-gradient(to right, #48BB78 0%, #805AD5 100%)",
+              fontFamily:
+                '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
             }}
-            display={{ base: "block", lg: "inline" }}
-            width="100%"
-            fontWeight="extrabold"
+            fontWeight="800"
           >
             PRECIOUS TIME
           </Typography>{" "}
@@ -48,6 +58,8 @@ const Component: React.FC = () => {
         <Box
           sx={{
             color: "#CBD5E0",
+            fontFamily:
+              '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
           }}
           px={{ base: 0, lg: 24 }}
           mb={6}
@@ -62,6 +74,7 @@ const Component: React.FC = () => {
           justifyContent={{ sm: "left", md: "center" }}
         >
           <Button
+            variant="contained"
             href="https://biskett.me/mzntaka0/other"
             target="_blank"
             size="large"
@@ -74,7 +87,7 @@ const Component: React.FC = () => {
             </Button>
           </Tooltip>
         </Stack>
-      </Box>
+      </Stack>
     </Box>
   );
 };

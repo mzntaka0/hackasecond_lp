@@ -11,14 +11,16 @@ type Props = {
 
 const Layout: React.FC<Props> = (props) => {
   const { children } = props;
+  const headerHeight = "72px";
   return (
     <>
       <Headroom>
-        <Header />
+        <Header height={headerHeight} />
       </Headroom>
       <Stack
         sx={{
           p: 3,
+          height: `calc(100vh - ${headerHeight})`,
         }}
         spacing={4}
       >

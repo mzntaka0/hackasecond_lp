@@ -19,6 +19,11 @@ const mainTheme: Theme = createTheme({
       default: "#1a202c",
       paper: "#FFFFFF",
     },
+    text: {
+      primary: "#EDF2F7",
+      secondary: "#CBD5E0",
+      disabled: "#FFFFFF",
+    },
   },
   components: {
     MuiButton: {
@@ -28,27 +33,27 @@ const mainTheme: Theme = createTheme({
         },
       },
     },
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          backgroundColor: "#FFFFFF",
-        },
-      },
-    },
-    MuiListItemButton: {
-      styleOverrides: {
-        root: {
-          textTransform: "none",
-        },
-      },
-    },
-    MuiMenuItem: {
-      styleOverrides: {
-        root: {
-          background: "#FFFFFF",
-        },
-      },
-    },
+    //MuiPaper: {
+    //  styleOverrides: {
+    //    root: {
+    //      backgroundColor: "#FFFFFF",
+    //    },
+    //  },
+    //},
+    //MuiListItemButton: {
+    //  styleOverrides: {
+    //    root: {
+    //      textTransform: "none",
+    //    },
+    //  },
+    //},
+    //MuiMenuItem: {
+    //  styleOverrides: {
+    //    root: {
+    //      background: "#FFFFFF",
+    //    },
+    //  },
+    //},
   },
   typography: {
     fontFamily:

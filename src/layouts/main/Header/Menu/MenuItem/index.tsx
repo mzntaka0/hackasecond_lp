@@ -24,7 +24,10 @@ import { MenuType } from "../menus";
 const styles = {
   active: {
     color: "#01579b",
-    //boxShadow: "inset 0 -5px 0 #01579b",
+    "&:active": {
+      color: "#01579b",
+    },
+    boxShadow: "inset 0 5px 0 #01579b",
   },
 } as const;
 
@@ -66,7 +69,18 @@ const Component: React.FC<Props> = (props) => {
             spacing={1}
           >
             {icon}
-            <Stack direction="row" alignItems="center">
+            <Stack
+              sx={{
+                "&:active": {
+                  color: "secondary",
+                },
+                "&:hover": {
+                  color: "secondary",
+                },
+              }}
+              direction="row"
+              alignItems="center"
+            >
               <Typography
                 sx={{
                   margin: 0,
@@ -103,12 +117,16 @@ const Component: React.FC<Props> = (props) => {
           >
             <Paper
               sx={{
-                minWidth: "150px",
+                minWidth: "max-content",
                 pointerEvents: "auto",
                 padding: 0,
+                backgroundColor: "#2D3748",
               }}
             >
-              <MenuList {...bindMenu(popupState)}>
+              <MenuList
+                sx={{ backgroundColor: "#2D3748" }}
+                {...bindMenu(popupState)}
+              >
                 {/*FIXME: modify logics*/}
                 {children?.map((child) => (
                   <MuiMenuItem
@@ -117,8 +135,9 @@ const Component: React.FC<Props> = (props) => {
                       router.asPath === child.to
                         ? {
                             color: "secondary",
+                            fontWeight: "bold",
                           }
-                        : {}
+                        : { color: "primary.main", fontWeight: "bold" }
                     }
                     component="a"
                     onClick={() => router.push(child.to)}

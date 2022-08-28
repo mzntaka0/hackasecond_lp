@@ -7,11 +7,16 @@ import Logo from "components/common/Logo";
 import { pagesPath } from "utils/$path";
 import Menu from "./Menu";
 
-const Header: React.FC = () => {
+type Props = {
+  height: string;
+};
+
+const Header: React.FC<Props> = (props) => {
+  const { height } = props;
   return (
     <Stack
       sx={{
-        height: "72px",
+        height,
         width: "100vw",
         p: (theme: Theme) => theme.spacing(0, 3, 0, 3),
         bgColor: "main",

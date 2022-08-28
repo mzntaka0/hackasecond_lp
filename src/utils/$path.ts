@@ -35,7 +35,8 @@ export const pagesPath = {
     },
     "mvp_development": {
       $url: (url?: { hash?: string }) => ({ pathname: '/services/mvp_development' as const, hash: url?.hash })
-    }
+    },
+    $url: (url?: { hash?: string }) => ({ pathname: '/services' as const, hash: url?.hash })
   },
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
 }

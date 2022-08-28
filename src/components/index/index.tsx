@@ -1,10 +1,15 @@
 import React from "react";
+import { Stack } from "@mui/material";
+
+import KnowledgeGraph from "./KnowledgeGraph";
+import Heros from "./Heros";
 
 const Content: React.FC = () => {
   return (
-    <div>
-      <div>hoge</div>
-    </div>
+    <Stack>
+      <Heros />
+      <KnowledgeGraph />
+    </Stack>
   );
 };
 

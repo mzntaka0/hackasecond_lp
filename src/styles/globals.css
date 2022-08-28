@@ -19,7 +19,7 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(243, 168, 0, 0.4);
-  border-radius: 7px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,11 +27,11 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar:horizontal {
-  height: 6px;
+  height: 3px;
 }
 
 ::-webkit-scrollbar-button:hover {

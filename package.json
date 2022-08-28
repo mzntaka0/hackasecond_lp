@@ -16,10 +16,12 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.10.2",
     "@mui/material": "^5.10.2",
+    "@react-hook/window-size": "^3.0.7",
     "material-ui-popup-state": "^4.0.2",
     "next": "^12.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-force-graph-3d": "^1.21.13",
     "react-headroom": "^3.2.0",
     "react-hook-form": "^7.34.2"
   },
