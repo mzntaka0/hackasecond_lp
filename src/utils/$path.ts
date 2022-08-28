@@ -38,3 +38,33 @@ export const pagesPath = {
 }
 
 export type PagesPath = typeof pagesPath
+
+export const staticPath = {
+  bookshelf_jpg: '/bookshelf.jpg',
+  desk_jpg: '/desk.jpg',
+  eng_takao_mizuno_resume_pdf: '/eng_takao_mizuno_resume.pdf',
+  favicon: {
+    android_chrome_192x192_png: '/favicon/android-chrome-192x192.png',
+    android_chrome_512x512_png: '/favicon/android-chrome-512x512.png',
+    apple_touch_icon_png: '/favicon/apple-touch-icon.png',
+    favicon_16x16_png: '/favicon/favicon-16x16.png',
+    favicon_32x32_png: '/favicon/favicon-32x32.png',
+    favicon_ico: '/favicon/favicon.ico',
+    site_webmanifest: '/favicon/site.webmanifest'
+  },
+  favicon_ico: '/favicon.ico',
+  full_logo_svg: '/full_logo.svg',
+  hackasecond_logo_jpg: '/hackasecond-logo.jpg',
+  ja_takao_mizuno_resume_xlsx: '/ja_takao_mizuno_resume.xlsx',
+  logo_jpg: '/logo.jpg',
+  logo_png: '/logo.png',
+  logo_svg: '/logo.svg',
+  mypc_jpg: '/mypc.jpg',
+  mypcparts_jpg: '/mypcparts.jpg',
+  name_jpg: '/name.jpg',
+  name_png: '/name.png',
+  sitemap_png: '/sitemap.png',
+  vercel_svg: '/vercel.svg'
+} as const
+
+export type StaticPath = typeof staticPath

@@ -14,12 +14,12 @@ const Header: React.FC = () => {
         bgColor: "main",
         boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       }}
-      direction="column"
+      direction="row"
       spacing={3}
-      justifyContent="center"
+      alignItems="center"
     >
       <Box>
-        <Logo />
+        <Logo height="90px" width="90px" />
       </Box>
       <Box>
         <Button variant="text">hoge</Button>
