@@ -2,13 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { Box, Stack, Button } from "@mui/material";
 
-import styles from "styles/Home.module.css";
 import ProfileImage from "./ProfileImage";
 import Profiles from "./Profiles";
 
 const Content: React.FC = () => {
   return (
-    <main className={styles.main}>
+    <main>
       This page is gonna host an about page. <br />
       Plase coming soon..
       <Stack spacing="24px">

@@ -1,8 +1,11 @@
 import React from "react";
+import Link from "next/link";
 import { Box, Stack, Button } from "@mui/material";
 import { Theme } from "@mui/material/styles";
 
 import Logo from "components/common/Logo";
+import { pagesPath } from "utils/$path";
+import Menu from "./Menu";
 
 const Header: React.FC = () => {
   return (
@@ -18,12 +21,12 @@ const Header: React.FC = () => {
       spacing={3}
       alignItems="center"
     >
-      <Box>
-        <Logo height="90px" width="90px" />
-      </Box>
-      <Box>
-        <Button variant="text">hoge</Button>
-      </Box>
+      <Link href={pagesPath.$url()} passHref>
+        <Box sx={{ cursor: "pointer" }} component="a">
+          <Logo height="40px" />
+        </Box>
+      </Link>
+      <Menu />
     </Stack>
   );
 };

@@ -32,6 +32,9 @@ export const pagesPath = {
     },
     "machine_learning": {
       $url: (url?: { hash?: string }) => ({ pathname: '/services/machine_learning' as const, hash: url?.hash })
+    },
+    "mvp_development": {
+      $url: (url?: { hash?: string }) => ({ pathname: '/services/mvp_development' as const, hash: url?.hash })
     }
   },
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
@@ -54,6 +57,7 @@ export const staticPath = {
   },
   favicon_ico: '/favicon.ico',
   full_logo_svg: '/full_logo.svg',
+  full_width_logo_svg: '/full_width_logo.svg',
   hackasecond_logo_jpg: '/hackasecond-logo.jpg',
   ja_takao_mizuno_resume_xlsx: '/ja_takao_mizuno_resume.xlsx',
   logo_jpg: '/logo.jpg',
