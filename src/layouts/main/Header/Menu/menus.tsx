@@ -21,6 +21,10 @@ export const menus: MenuType[] = [
     to: pagesPath.about.$url().pathname,
   },
   {
+    title: "Blog",
+    to: pagesPath.blogs.$url().pathname,
+  },
+  {
     title: "Services",
     to: pagesPath.services.machine_learning.$url().pathname,
     children: [

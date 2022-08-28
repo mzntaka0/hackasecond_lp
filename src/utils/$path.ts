@@ -64,6 +64,7 @@ export const staticPath = {
   logo_jpg: '/logo.jpg',
   logo_png: '/logo.png',
   logo_svg: '/logo.svg',
+  me_jpg: '/me.jpg',
   mypc_jpg: '/mypc.jpg',
   mypcparts_jpg: '/mypcparts.jpg',
   name_jpg: '/name.jpg',
