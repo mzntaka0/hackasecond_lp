@@ -1,7 +1,19 @@
 import dynamic from "next/dynamic";
+import { Typography, Stack } from "@mui/material";
 
-const FocusGraph = dynamic(() => import("./FocusGraph"), {
-  ssr: false,
-});
+const Component: React.FC = () => {
+  const FocusGraph = dynamic(() => import("./FocusGraph"), {
+    ssr: false,
+  });
 
-export default FocusGraph;
+  return (
+    <Stack spacing={3}>
+      <Typography sx={{ fontWeight: "bold" }} variant="h4">
+        It's Me!
+      </Typography>
+      <FocusGraph />
+    </Stack>
+  );
+};
+
+export default Component;

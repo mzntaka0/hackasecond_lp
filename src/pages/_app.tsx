@@ -4,6 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider, EmotionCache } from "@emotion/react";
+import { SnackbarProvider } from "notistack";
 
 import { CustomNextPage } from "types/customNextPage";
 import theme from "theme/theme";
@@ -40,9 +41,11 @@ function MyApp(props: CustomAppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Layout name={layout}>
-          <Component {...pageProps} />
-        </Layout>
+        <SnackbarProvider maxSnack={3}>
+          <Layout name={layout}>
+            <Component {...pageProps} />
+          </Layout>
+        </SnackbarProvider>
       </ThemeProvider>
     </CacheProvider>
   );

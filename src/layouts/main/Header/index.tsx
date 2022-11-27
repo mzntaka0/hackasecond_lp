@@ -19,7 +19,8 @@ const Header: React.FC<Props> = (props) => {
         height,
         width: "100vw",
         p: (theme: Theme) => theme.spacing(0, 3, 0, 3),
-        bgColor: "main",
+        backgroundColor: "main",
+        backdropFilter: "blur(5.8px)",
         boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       }}
       direction="row"

@@ -1,18 +1,29 @@
 import React from "react";
-import { Stack, Grid } from "@mui/material";
+import { Stack, Grid, Typography } from "@mui/material";
 
 import SkillCard from "./SkillCard";
-import { skills } from "./skills";
+import { languages, tools } from "./skills";
 
 const Component: React.FC = () => {
   return (
-    <Grid container spacing={3} width="100%">
-      {skills.map((value) => (
-        <Grid item>
-          <SkillCard {...value} />
-        </Grid>
-      ))}
-    </Grid>
+    <Stack width="100%" height="fit-content" spacing={3}>
+      <Typography variant="h5">Languages</Typography>
+      <Grid container spacing={3} width="100%">
+        {languages.map((value) => (
+          <Grid key={value.title} item>
+            <SkillCard {...value} />
+          </Grid>
+        ))}
+      </Grid>
+      <Typography variant="h5">Tools</Typography>
+      <Grid container spacing={3} width="100%">
+        {tools.map((value) => (
+          <Grid key={value.title} item>
+            <SkillCard {...value} />
+          </Grid>
+        ))}
+      </Grid>
+    </Stack>
   );
 };
 

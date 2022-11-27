@@ -11,11 +11,20 @@ import Me from "components/common/Me";
 const Component: React.FC = () => {
   const router = useRouter();
   return (
-    <Stack spacing={3} direction="row">
-      <Me width="40%" />
+    <Stack
+      spacing={3}
+      width="100%"
+      direction="row"
+      justifyContent="space-between"
+    >
+      <Stack width="100%" alignItems="center">
+        <Stack width="60%">
+          <Me maxWidth="300px" />
+        </Stack>
+      </Stack>
       <Stack
-        sx={{ flex: 1 }}
         spacing={3}
+        width="100%"
         alignItems="center"
         justifyContent="center"
       >
@@ -36,7 +45,7 @@ const Component: React.FC = () => {
             Frontend/Design
           </Typography>
           <Typography fontWeight="bold" variant="body1">
-            Product Management
+            Product Management/Scrum
           </Typography>
           <Stack>
             <Tooltip title="Comming Soon..">

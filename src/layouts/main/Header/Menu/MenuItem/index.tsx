@@ -130,6 +130,7 @@ const Component: React.FC<Props> = (props) => {
                 {/*FIXME: modify logics*/}
                 {children?.map((child) => (
                   <MuiMenuItem
+                    key={`${to}${child.title}`}
                     dense
                     sx={
                       router.asPath === child.to

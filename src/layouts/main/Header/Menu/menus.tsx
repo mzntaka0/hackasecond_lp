@@ -46,7 +46,7 @@ export const menus: MenuType[] = [
       },
       {
         title: "Integration",
-        to: pagesPath.services.frontend.$url().pathname,
+        to: pagesPath.services.integration.$url().pathname,
       },
       {
         title: "Consultation",

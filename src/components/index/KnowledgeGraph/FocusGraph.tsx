@@ -1,9 +1,14 @@
 // import dynamic from "next/dynamic";
 import React from "react";
-import ForceGraph3D, { ForceGraphMethods } from "react-force-graph-3d";
+import ForceGraph3D, {
+  ForceGraphMethods,
+  NodeObject,
+} from "react-force-graph-3d";
+import { Object3D } from "three";
+import SpriteText from "three-spritetext";
 import { useWindowSize } from "@react-hook/window-size";
 
-import data from "./data";
+import data from "./textData";
 
 const FocusGraph = () => {
   const fgRef = React.useRef<ForceGraphMethods>();
@@ -14,7 +19,6 @@ const FocusGraph = () => {
       const distance = 40;
       const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
       if (fgRef.current) {
-        console.log(fgRef.current);
         fgRef.current.cameraPosition(
           {
             x: node.x * distRatio,
@@ -37,7 +41,18 @@ const FocusGraph = () => {
       graphData={data}
       nodeLabel="id"
       nodeAutoColorBy="group"
+      nodeRelSize={0}
       onNodeClick={handleClick}
+      backgroundColor="rgba(0, 0, 0, 0.05)"
+      nodeThreeObjectExtend={true}
+      nodeThreeObject={(node: NodeObject) => {
+        const { id } = node;
+        const text = typeof id === "string" ? id : id?.toString();
+        const sprite = new SpriteText(text);
+        sprite.color = "#8898aa";
+        sprite.textHeight = 12;
+        return sprite;
+      }}
     />
   );
 };
