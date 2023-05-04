@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Box, Stack, Button } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { Theme } from "@mui/material/styles";
 
 import Logo from "components/common/Logo";
@@ -28,9 +28,14 @@ const Header: React.FC<Props> = (props) => {
       alignItems="center"
     >
       <Link href={pagesPath.$url()} passHref>
-        <Box sx={{ cursor: "pointer" }} component="a">
-          <Logo height="40px" />
-        </Box>
+        <Stack
+          height="100%"
+          justifyContent="center"
+          sx={{ cursor: "pointer" }}
+          component="a"
+        >
+          <Logo width="95px" />
+        </Stack>
       </Link>
       <Menu />
     </Stack>
