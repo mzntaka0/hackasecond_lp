@@ -12,6 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import { ArrowDropDown } from "@mui/icons-material";
+import { styled } from "@mui/material/styles";
 import {
   bindHover,
   bindMenu,
@@ -30,6 +31,16 @@ const styles = {
     boxShadow: "inset 0 5px 0 #01579b",
   },
 } as const;
+
+const LinkWrapper = styled("div")({
+  textDecoration: "none",
+  "& > a": {
+    textDecoration: "none",
+  },
+  "& > svg": {
+    textDecoration: "none",
+  },
+});
 
 type Props = MenuType;
 
@@ -57,36 +68,21 @@ const Component: React.FC<Props> = (props) => {
             : null),
         }}
       >
-        <Link href={to} passHref>
-          <Stack
-            sx={{
-              px: 2,
-              height: "100%",
-            }}
-            direction="row"
-            alignItems="center"
-            {...bindHover(popupState)}
-            spacing={1}
-          >
-            {icon}
+        <LinkWrapper>
+          <Link href={to} passHref>
             <Stack
               sx={{
-                "&:active": {
-                  color: "secondary",
-                },
-                "&:hover": {
-                  color: "secondary",
-                },
+                px: 2,
+                height: "100%",
               }}
               direction="row"
               alignItems="center"
+              {...bindHover(popupState)}
+              spacing={1}
             >
-              <Typography
+              {icon}
+              <Stack
                 sx={{
-                  margin: 0,
-                  display: "inline",
-                  color: "primary.main",
-                  fontWeight: "bold",
                   "&:active": {
                     color: "secondary",
                   },
@@ -94,13 +90,30 @@ const Component: React.FC<Props> = (props) => {
                     color: "secondary",
                   },
                 }}
+                direction="row"
+                alignItems="center"
               >
-                {title}
-              </Typography>
-              {children && <ArrowDropDown sx={{ color: "secondary" }} />}
+                <Typography
+                  sx={{
+                    margin: 0,
+                    display: "inline",
+                    color: "primary.main",
+                    fontWeight: "bold",
+                    "&:active": {
+                      color: "secondary",
+                    },
+                    "&:hover": {
+                      color: "secondary",
+                    },
+                  }}
+                >
+                  {title}
+                </Typography>
+                {children && <ArrowDropDown sx={{ color: "secondary" }} />}
+              </Stack>
             </Stack>
-          </Stack>
-        </Link>
+          </Link>
+        </LinkWrapper>
       </ListItem>
       {children && (
         <Box>
