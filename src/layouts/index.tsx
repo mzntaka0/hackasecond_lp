@@ -15,13 +15,7 @@ const Layout: React.FC<Props> = (props) => {
     () => import(`./${name}`)
   );
   return (
-    <Stack
-      width="100vw"
-      height="100%"
-      sx={{
-        backgroundImage: "linear-gradient(to left, #001b24, #1b3a4a)",
-      }}
-    >
+    <Stack width="100vw" height="100vh">
       <Layout>{children}</Layout>
     </Stack>
   );

@@ -10,6 +10,7 @@ import { CustomNextPage } from "types/customNextPage";
 import theme from "theme/theme";
 import createEmotionCache from "utils/createEmotionCache";
 import Layout from "layouts";
+import "styles/globals.css";
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
