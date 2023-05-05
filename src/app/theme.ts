@@ -24,6 +24,9 @@ const mainTheme: Theme = createTheme({
       secondary: "#CBD5E0",
       disabled: "#FFFFFF",
     },
+    common: {
+      white: "#EDF2F7",
+    },
   },
   components: {
     MuiButton: {

@@ -7,7 +7,7 @@ const Component: React.FC = () => {
   });
 
   return (
-    <Stack spacing={3}>
+    <Stack sx={{ color: "white" }} spacing={3}>
       <Typography sx={{ fontWeight: "bold" }} variant="h4">
         It's Me!
       </Typography>

@@ -2,7 +2,7 @@ import React from "react";
 import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
 
 import { staticPath } from "lib/$path";
-import "styles/globals.css";
+import "./globals.css";
 import { MuiSetup } from "./MuiSetup";
 //import theme from "./theme";
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 // NOTE: https://github.com/mui/material-ui/issues/34898
 function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html>
+    <html lang="en" suppressHydrationWarning>
       {/* TODO: modify here ref. https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#modifying-head
       <Head>
         <link

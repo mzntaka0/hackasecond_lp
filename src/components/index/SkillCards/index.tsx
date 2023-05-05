@@ -6,7 +6,12 @@ import { languages, tools } from "./skills";
 
 const Component: React.FC = () => {
   return (
-    <Stack width="100%" height="fit-content" spacing={3}>
+    <Stack
+      sx={{ color: "common.white" }}
+      width="100%"
+      height="fit-content"
+      spacing={3}
+    >
       <Typography variant="h5">Languages</Typography>
       <Grid container spacing={3} width="100%">
         {languages.map((value) => (

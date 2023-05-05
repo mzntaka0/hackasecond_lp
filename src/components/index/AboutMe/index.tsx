@@ -12,6 +12,9 @@ const Component: React.FC = () => {
   const router = useRouter();
   return (
     <Stack
+      sx={{
+        color: "common.white",
+      }}
       spacing={3}
       width="100%"
       direction="row"
