@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { Stack, Typography, IconButton, Button, Tooltip } from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";

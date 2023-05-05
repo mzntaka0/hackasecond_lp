@@ -28,12 +28,7 @@ const Header: React.FC<Props> = (props) => {
       alignItems="center"
     >
       <Link href="/" passHref>
-        <Stack
-          height="100%"
-          justifyContent="center"
-          sx={{ cursor: "pointer" }}
-          component="a"
-        >
+        <Stack height="100%" justifyContent="center" sx={{ cursor: "pointer" }}>
           <Logo width="95px" />
         </Stack>
       </Link>

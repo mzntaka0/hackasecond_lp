@@ -3,7 +3,6 @@ import { Stack } from "@mui/material";
 import Headroom from "react-headroom";
 
 import Header from "./Header";
-import Footer from "./Footer";
 
 type Props = {
   children: React.ReactNode;
@@ -18,6 +17,8 @@ const Layout: React.FC<Props> = (props) => {
         <Header height={headerHeight} />
       </Headroom>
       <Stack
+        width="100%"
+        height="100%"
         sx={{
           p: 3,
           height: `calc(100vh - ${headerHeight}) * 2`,

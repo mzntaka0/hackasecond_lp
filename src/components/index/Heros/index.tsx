@@ -69,7 +69,7 @@ const Component: React.FC = () => {
           >
             Book a Schedule
           </Button>
-          <ContactButton />
+          {/*<ContactButton />*/}
         </Stack>
       </Stack>
     </Box>

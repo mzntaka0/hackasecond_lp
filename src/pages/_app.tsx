@@ -5,10 +5,11 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import { SnackbarProvider } from "notistack";
+import { ReactFlowProvider } from "reactflow";
 
 import { CustomNextPage } from "types/customNextPage";
 import theme from "theme/theme";
-import createEmotionCache from "utils/createEmotionCache";
+import createEmotionCache from "lib/createEmotionCache";
 import Layout from "layouts";
 import "styles/globals.css";
 
@@ -43,9 +44,11 @@ function MyApp(props: CustomAppProps) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <SnackbarProvider maxSnack={3}>
-          <Layout name={layout}>
-            <Component {...pageProps} />
-          </Layout>
+          <ReactFlowProvider>
+            <Layout name={layout}>
+              <Component {...pageProps} />
+            </Layout>
+          </ReactFlowProvider>
         </SnackbarProvider>
       </ThemeProvider>
     </CacheProvider>
