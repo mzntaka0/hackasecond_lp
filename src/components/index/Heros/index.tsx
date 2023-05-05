@@ -21,7 +21,7 @@ const Component: React.FC = () => {
               '-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
           }}
           mb={6}
-          color="text.main"
+          color="common.white"
           fontWeight="800"
         >
           Enhance the value of your{" "}
@@ -69,7 +69,7 @@ const Component: React.FC = () => {
           >
             Book a Schedule
           </Button>
-          <ContactButton />
+          {/*<ContactButton />*/}
         </Stack>
       </Stack>
     </Box>

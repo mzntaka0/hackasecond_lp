@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack } from "@mui/material";
 
-import { staticPath } from "utils/$path";
+import { staticPath } from "lib/$path";
 
 type Props = {
   height?: string;
